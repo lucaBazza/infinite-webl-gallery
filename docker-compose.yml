@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  sample-app:
+    container_name: zabbanode-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8080:8080'
